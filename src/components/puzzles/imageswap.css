@@ -1,0 +1,18 @@
+.puzzle-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 525px;
+  width: 525px;
+}
+.tilewrap {
+  height: 100px;
+  width: 100px;
+  margin: 5px auto;
+  background-color: gray;
+}
+.selected {
+  background-color: blue;
+}

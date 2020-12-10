@@ -32,13 +32,7 @@ class ImageSwap extends React.Component {
     }
     this.handleSwap = this.handleSwap.bind(this);
     this.swapTile = this.swapTile.bind(this);
-
   }
-
-
-  /*
-    Failing on lines 56 & 57. Not finding .id
-  */
 
   handleSwap(id) {
     if (this.state.tileSelected) {
@@ -52,13 +46,14 @@ class ImageSwap extends React.Component {
   }
 
   swapTile(id1, id2) {
-    let newTiles = [this.state.tilesArray];
-    let index1 = this.state.tilesArray.findIndex(tile => tile.id === id1);
-    let index2 = this.state.tilesArray.findIndex(tile => tile.id === id2);
+    let newTiles = [...this.state.tilesArray];
+    let index1 = newTiles.findIndex(tile => tile.id === id1);
+    let index2 = newTiles.findIndex(tile => tile.id === id2);
     let tile1 = newTiles[index1];
     let tile2 = newTiles[index2];
     newTiles[index2] = tile1;
     newTiles[index1] = tile2;
+    console.log('new array', newTiles);
     this.setState({
       tilesArray: newTiles,
       tileSelected: false,
