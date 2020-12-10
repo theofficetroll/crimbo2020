@@ -36,6 +36,9 @@ class ImageSwap extends React.Component {
   }
 
 
+  /*
+    Failing on lines 56 & 57. Not finding .id
+  */
 
   handleSwap(id) {
     if (this.state.tileSelected) {
@@ -43,7 +46,7 @@ class ImageSwap extends React.Component {
     } else {
       this.setState({
         selectedTileId: id,
-        tileSelected:true
+        tileSelected: true,
       })
     }
   }
